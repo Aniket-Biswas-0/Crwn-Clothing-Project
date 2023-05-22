@@ -1,25 +1,27 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-	body {
-		margin: 0;
-		padding: 20px 40px;
-		font-family: 'Open Sans Condensed', sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
+body {
+	height: 100vh;
+	margin: 0;
+	font-family: 'Carter One' 'Tilt Warp', 'Michroma', 'Genos', 'Pacifico';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: rgb(86, 237, 5);
+	background: radial-gradient(circle, rgba(86, 237, 5, 1) -10%, rgba(5, 83, 135, 1) 42%, rgba(1, 33, 40, 1) 80%);
+  }
 
-	code {
-		font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-			monospace;
-	}
+  code {
+	font-family: 'Tilt Warp', 'Michroma', 'Genos', 'Pacifico', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+	  monospace;
+  }
 
-	a {
-		text-decoration: none;
-		color: black;
-	}
+  a {
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+  }
 
-	* {
-		box-sizing: border-box;
-	}
+  * {
+  box-sizing: border-box;
+}
 `;
