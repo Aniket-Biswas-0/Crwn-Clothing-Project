@@ -34,7 +34,7 @@ const Navigation = () => {
         </LogoContainer>
         <NavLinks>
           <NavLink to='/shop'>SHOP</NavLink>
-
+          <CartIcon />
           {currentUser ? (
               <NavLink as='span'>
                 <UserDropdown />
@@ -42,7 +42,6 @@ const Navigation = () => {
           ) : (
             <NavLink to='/auth'>SIGN IN</NavLink>
           )}
-          <CartIcon />
         </NavLinks>
         {isCartOpen && <CartDropdown />}
         </NavigationContainer>
