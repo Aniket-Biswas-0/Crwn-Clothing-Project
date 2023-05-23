@@ -6,7 +6,7 @@ export const NavigationContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0rem 2rem;
+  padding: 0rem 1rem;
   margin-bottom: -5px;
   font-family: 'Carter One';
   background: #000a13;
