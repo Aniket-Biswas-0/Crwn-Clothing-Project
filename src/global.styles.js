@@ -9,6 +9,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background: rgb(86, 237, 5);
 	background: radial-gradient(circle, rgba(86, 237, 5, 1) -10%, rgba(5, 83, 135, 1) 42%, rgba(1, 33, 40, 1) 80%);
+	overflow: hidden;
   }
 
   code {
@@ -18,6 +19,10 @@ body {
 
   a {
 	text-decoration: none;
+	color: rgb(255, 255, 255);
+  }
+
+  span {
 	color: rgb(255, 255, 255);
   }
 

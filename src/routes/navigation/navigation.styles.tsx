@@ -6,7 +6,11 @@ export const NavigationContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  padding: 0rem 2rem;
+  margin-bottom: -5px;
+  font-family: 'Carter One';
+  background: #000a13;
+
 
   @media screen and (max-width: 800px) {
     height: 60px;
@@ -17,8 +21,13 @@ export const NavigationContainer = styled.div`
 
 export const LogoContainer = styled(Link)`
   height: 100%;
-  width: 70px;
+  width: 470px;
   padding: 25px;
+  & span{
+    padding-left: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
 
   @media screen and (max-width: 800px) {
     width: 50px;
@@ -32,6 +41,7 @@ export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin: .8rem 6rem;
 
   @media screen and (max-width: 800px) {
     width: 80%;
@@ -41,4 +51,6 @@ export const NavLinks = styled.div`
 export const NavLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 `;
