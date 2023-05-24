@@ -11,6 +11,8 @@ export const MenuTrigger = styled.div`
     background-color: transparent;
     margin-top: .8rem;
     color: #FFF;
+    top: 15px;
+    right: 100px
 `;
 
 export const DropdownMenu = styled.div`
@@ -22,6 +24,9 @@ export const DropdownMenu = styled.div`
     visibility: visible;
     transform: translateY(0);
     transition: 500ms ease;
+    z-index: 1;
+    top: 65px;
+    right: 120px;
     h3{
         width: 100%;
         text-align: center;
@@ -37,7 +42,7 @@ export const DropdownMenu = styled.div`
         content: '';
         position: absolute;
         top: -5px;
-        right: 150px;
+        right: 20px;
         height: 20px;
         width: 20px;
         background: #37B140;

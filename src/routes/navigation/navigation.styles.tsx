@@ -10,7 +10,6 @@ export const NavigationContainer = styled.div`
   font-family: 'Carter One';
   background: #000a13;
 
-
   @media screen and (max-width: 800px) {
     height: 60px;
     padding: 10px 20px;
@@ -40,7 +39,8 @@ export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: .8rem 9.6rem;
+  margin-right: 5rem;
+  margin-top: 10px;
 
   @media screen and (max-width: 800px) {
     width: 80%;
@@ -48,10 +48,13 @@ export const NavLinks = styled.div`
 `;
 
 export const NavLink = styled(Link)`
-  padding: 10px 25px;
+  padding: 0px 20px;
   margin-top:0px;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 1.5rem;
+  div{
+    margin-right: 25px;
+  }
   }
 `;
