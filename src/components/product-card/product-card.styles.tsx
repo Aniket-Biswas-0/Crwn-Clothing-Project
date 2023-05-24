@@ -28,6 +28,8 @@ export const ProductCartContainer = styled.div`
   &:hover {
     img {
       opacity: 0.8;
+      transform: scale(1.1);
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
 
     button {
@@ -64,7 +66,6 @@ export const Footer = styled.div`
   justify-content: space-between;
   font-size: 18px;
   font-family: 'Carter One';
-  padding-left: 15px;
 `;
 
 export const Name = styled.span`

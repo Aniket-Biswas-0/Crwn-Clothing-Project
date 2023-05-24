@@ -53,6 +53,7 @@ export const NavLink = styled(Link)`
   cursor: pointer;
   text-transform: uppercase;
   font-size: 1.5rem;
+  
   div{
     margin-right: 25px;
   }

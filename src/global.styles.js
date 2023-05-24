@@ -9,7 +9,14 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background: rgb(86, 237, 5);
 	background: radial-gradient(circle, rgba(86, 237, 5, 1) -10%, rgba(5, 83, 135, 1) 42%, rgba(1, 33, 40, 1) 80%);
-	
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		width: 0em;
+	  }
+	&::-webkit-scrollbar-thumb {
+		background-color: transparent;
+	  }
   }
 
   code {

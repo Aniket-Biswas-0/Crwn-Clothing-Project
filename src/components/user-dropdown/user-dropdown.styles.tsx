@@ -24,25 +24,28 @@ export const DropdownMenu = styled.div`
     visibility: visible;
     transform: translateY(0);
     transition: 500ms ease;
-    z-index: 1;
-    top: 65px;
+    z-index: 7;
+    top: 70px;
     right: 120px;
+    border: 1px solid #000000; 
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.6);
+
     h3{
         width: 100%;
         text-align: center;
         font-size: 18px;
-        padding: 10px 0;
+        padding: 7px 0px;
         font-weight: 500;
         font-size: 18px;
-        color: #cecece;
+        color: #f4f4f4;
         line-height: 1.2rem;
       }
 
     &::before{
         content: '';
         position: absolute;
-        top: -5px;
-        right: 20px;
+        right: 15px;
+        bottom: 280px;
         height: 20px;
         width: 20px;
         background: #37B140;
@@ -68,7 +71,8 @@ export const DropdownItems = styled.div`
     & img{
         max-width: 20px;
         margin-right: 10px;
-        opacity: 0.5;
+        margin-top: 5px;
+        opacity: 1;
         transition: 500ms;
       }
     & a{
