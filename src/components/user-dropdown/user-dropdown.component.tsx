@@ -2,6 +2,7 @@ import user from "../../assets/user.png";
 import help from "../../assets/question.png";
 import logout from "../../assets/log-out.png";
 import question from "../../assets/question.png";
+import ProfileIcon from "../profile-icon/profile-icon.component";
 
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useState, useEffect, useRef } from 'react';
@@ -41,11 +42,12 @@ const UserDropdown = () => {
 
     return (
         <MenuContainer ref={menuRef}>
-            <MenuTrigger as="button" onClick={() => { setOpen(!open) }}>
-                {currentUser?.displayName}
+            <MenuTrigger as="div" onClick={() => { setOpen(!open) }}>
+                <ProfileIcon />
             </MenuTrigger>
             {open ? (
                 <DropdownMenu>
+                    <h3>{currentUser?.displayName}</h3>
                         <MenuItems as='ul'>
                             <DropdownItem img={user} text={"My Profile"} />
                             <DropdownItem img={question} text={"FAQ"} />

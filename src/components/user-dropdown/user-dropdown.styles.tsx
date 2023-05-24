@@ -5,15 +5,12 @@ export const MenuContainer = styled.div`
   font-size: 1rem;
 `;
 
-export const MenuTrigger = styled.button`
+export const MenuTrigger = styled.div`
     cursor: pointer;
     border: none;
     background-color: transparent;
+    margin-top: .8rem;
     color: #FFF;
-    font-size: 1.5em;
-    font-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Carter One';
 `;
 
 export const DropdownMenu = styled.div`
@@ -29,7 +26,7 @@ export const DropdownMenu = styled.div`
         width: 100%;
         text-align: center;
         font-size: 18px;
-        padding: 20px 0;
+        padding: 10px 0;
         font-weight: 500;
         font-size: 18px;
         color: #cecece;
@@ -40,7 +37,7 @@ export const DropdownMenu = styled.div`
         content: '';
         position: absolute;
         top: -5px;
-        right: 20px;
+        right: 150px;
         height: 20px;
         width: 20px;
         background: #37B140;
