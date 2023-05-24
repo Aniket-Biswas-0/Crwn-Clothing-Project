@@ -36,7 +36,7 @@ const Navigation = () => {
           <NavLink to='/shop'>SHOP</NavLink>
           <CartIcon />
           {currentUser ? (
-              <NavLink as='span'>
+              <NavLink as='div' className='dropdown'>
                 <UserDropdown />
               </NavLink>
           ) : (
@@ -50,5 +50,4 @@ const Navigation = () => {
     </Fragment>
   );
 };
-
 export default Navigation;

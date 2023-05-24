@@ -6,7 +6,6 @@ export const NavigationContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0rem 1rem;
   margin-bottom: -5px;
   font-family: 'Carter One';
   background: #000a13;
@@ -41,7 +40,7 @@ export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: .8rem 6rem;
+  margin: .8rem 15px;
 
   @media screen and (max-width: 800px) {
     width: 80%;
@@ -53,4 +52,5 @@ export const NavLink = styled(Link)`
   cursor: pointer;
   text-transform: uppercase;
   font-size: 1.5rem;
+  }
 `;

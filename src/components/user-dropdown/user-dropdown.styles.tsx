@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const MenuContainer = styled.div`
   font-family: 'Carter One';
   font-size: 1rem;
-  display: inline-block;
 `;
 
 export const MenuTrigger = styled.button`
@@ -18,12 +17,24 @@ export const MenuTrigger = styled.button`
 `;
 
 export const DropdownMenu = styled.div`
-    margin-left: 1.4rem;
     position: absolute;
     background-color: #37B140;
     border-radius: 8px;
     width:200px;
-    
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 500ms ease;
+    h3{
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        padding: 20px 0;
+        font-weight: 500;
+        font-size: 18px;
+        color: #cecece;
+        line-height: 1.2rem;
+      }
 
     &::before{
         content: '';
@@ -62,23 +73,6 @@ export const DropdownItems = styled.div`
         max-width: 100px;
         margin-left: 10px;
         transition: 500ms;
-      }
-`;
-
-export const ActiveDropdown = styled.div`
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    transition: 500ms ease;
-    h3{
-        width: 100%;
-        text-align: center;
-        font-size: 18px;
-        padding: 20px 0;
-        font-weight: 500;
-        font-size: 18px;
-        color: #cecece;
-        line-height: 1.2rem;
       }
 `;
 export const InactiveDropdown = styled.div`

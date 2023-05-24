@@ -1,11 +1,10 @@
 import user from "../../assets/user.png";
-import edit from "../../assets/edit.png";
 import help from "../../assets/question.png";
 import logout from "../../assets/log-out.png";
 import question from "../../assets/question.png";
 
 import { useSelector, useDispatch } from 'react-redux';
-import React, { useState, useEffect, useRef, FC } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import { selectCurrentUser } from "../../store/user/user.selector";
 import { signOutStart } from "../../store/user/user.action";
@@ -16,7 +15,6 @@ import {
     MenuTrigger,
     DropdownMenu,
     DropdownItems,
-    ActiveDropdown,
     InactiveDropdown
 } from './user-dropdown.styles';
 
@@ -48,14 +46,12 @@ const UserDropdown = () => {
             </MenuTrigger>
             {open ? (
                 <DropdownMenu>
-                    <ActiveDropdown>
                         <MenuItems as='ul'>
                             <DropdownItem img={user} text={"My Profile"} />
                             <DropdownItem img={question} text={"FAQ"} />
                             <DropdownItem img={help} text={"Help Center"} />
                             <DropdownItem img={logout} text={"Log Out"} />
                         </MenuItems>
-                    </ActiveDropdown>
                 </DropdownMenu>
             ) : (
                 <InactiveDropdown></InactiveDropdown>
@@ -74,15 +70,15 @@ const DropdownItem: React.FC<DropdownItemProps> = (props) => {
     if (props.text === "Log Out") {
         return (
             <DropdownItems onClick={signOutUser}>
-                <img src={props.img}></img>
-                <a>{props.text}</a>
+                <img src={props.img} alt=""></img>
+                <a href="#">{props.text}</a>
             </DropdownItems>)
     }
     else {
         return (
             <DropdownItems>
-                <img src={props.img}></img>
-                <a>{props.text}</a>
+                <img src={props.img} alt=""></img>
+                <a href='#'>{props.text}</a>
             </DropdownItems>)
     };
 }
