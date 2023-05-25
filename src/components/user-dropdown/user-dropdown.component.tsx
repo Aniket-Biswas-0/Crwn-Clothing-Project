@@ -16,7 +16,7 @@ import {
     MenuTrigger,
     DropdownMenu,
     DropdownItems,
-    InactiveDropdown
+    DropUpMenu
 } from './user-dropdown.styles';
 
 const UserDropdown = () => {
@@ -56,7 +56,15 @@ const UserDropdown = () => {
                         </MenuItems>
                 </DropdownMenu>
             ) : (
-                <InactiveDropdown></InactiveDropdown>
+                <DropUpMenu>
+                    <h3>{currentUser?.displayName}</h3>
+                        <MenuItems as='ul'>
+                            <DropdownItem img={user} text={"My Profile"} />
+                            <DropdownItem img={question} text={"FAQ"} />
+                            <DropdownItem img={help} text={"Help Center"} />
+                            <DropdownItem img={logout} text={"Log Out"} />
+                        </MenuItems>
+                </DropUpMenu>
             )}
         </MenuContainer>
     )

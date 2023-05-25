@@ -46,8 +46,8 @@ const Navigation = () => {
           )}
         </NavLinks>
         {isCartOpen && <CartDropdown />}
-        </NavigationContainer>
-        <div className="spacer layer1"></div>
+      </NavigationContainer>
+      <div className="spacer layer1"></div>
         <Outlet />
     </Fragment>
   );

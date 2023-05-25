@@ -1,10 +1,21 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import {
   BaseButton,
   GoogleSignInButton,
   InvertedButton,
 } from '../button/button.styles';
+
+const slideInAnimation = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+`;
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
@@ -17,6 +28,11 @@ export const CartDropdownContainer = styled.div`
   background-color: #37B140;
   top: 70px;
   right: 200px;
+  opacity: 0;
+  transform: translateY(-100%);
+  animation-name: ${slideInAnimation};
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
   z-index: 5;
   border-radius: 35px 10px;
   box-shadow: 5px 4px 3px rgba(0, 0, 0, .6);

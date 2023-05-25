@@ -9,6 +9,7 @@ export const NavigationContainer = styled.div`
   margin-bottom: -5px;
   font-family: 'Carter One';
   background: #000a13;
+  padding: 0px 20px;
 
   @media screen and (max-width: 800px) {
     height: 60px;
@@ -39,7 +40,6 @@ export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 5rem;
   margin-top: 10px;
 
   @media screen and (max-width: 800px) {
@@ -48,7 +48,7 @@ export const NavLinks = styled.div`
 `;
 
 export const NavLink = styled(Link)`
-  padding: 0px 20px;
+  padding: 0px 30px;
   margin-top:0px;
   cursor: pointer;
   text-transform: uppercase;

@@ -6,8 +6,8 @@ export const CategoryPreviewContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: -20px;
-  margin-bottom: 50px;
+  margin-top: -30px;
+  margin-bottom: 70px;
   font-family: 'Carter One':
 
   @media screen and (max-width: 800px) {
@@ -16,7 +16,7 @@ export const CategoryPreviewContainer = styled.div`
 `;
 
 export const Title = styled(Link)`
-  font-size: 28px;
+  font-size: 35px;
   margin-top: 25px;
   cursor: pointer;
   font-family: 'Carter One':
@@ -24,6 +24,7 @@ export const Title = styled(Link)`
 
 export const Preview = styled.div`
   display: grid;
+  margin: 20px 0px;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 80px;
 
