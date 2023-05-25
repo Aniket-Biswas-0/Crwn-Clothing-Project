@@ -40,6 +40,7 @@ display: flex;
 justify-content: center;
 border-radius: 8px;
 margin: 20px auto;
+align-items: center;
 
   &:hover {
     background-color: white;

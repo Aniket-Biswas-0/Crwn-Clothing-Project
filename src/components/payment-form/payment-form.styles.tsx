@@ -2,19 +2,27 @@ import styled from 'styled-components';
 import Button from '../button/button.component';
 
 export const PaymentFormContainer = styled.div`
-  height: 300px;
+  height: 130px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 35px 20px;
+  background-color: #abe9cd;
+  background-image: linear-gradient(90deg, #abe9cd 0%, #3eadcf 74%);
+
 `;
 
 export const FormContainer = styled.form`
   height: 100px;
   min-width: 500px;
+  h2 {
+    
+  }
 `;
 
 export const PaymentButton = styled(Button)`
   margin-left: auto;
-  margin-top: 30px;
+  margin-top: 50px;
 `;
