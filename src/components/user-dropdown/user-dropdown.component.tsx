@@ -6,6 +6,7 @@ import ProfileIcon from "../profile-icon/profile-icon.component";
 
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from "react-router-dom";
 
 import { selectCurrentUser } from "../../store/user/user.selector";
 import { signOutStart } from "../../store/user/user.action";
@@ -49,9 +50,15 @@ const UserDropdown = () => {
                 <DropdownMenu>
                     <h3>{currentUser?.displayName}</h3>
                         <MenuItems as='ul'>
+                            <Link to='/user'>
                             <DropdownItem img={user} text={"My Profile"} />
-                            <DropdownItem img={question} text={"FAQ"} />
-                            <DropdownItem img={help} text={"Help Center"} />
+                            </Link>
+                            <Link to='/faq'>
+                                <DropdownItem img={question} text={"FAQ"} />
+                            </Link>
+                            <Link to='/help'>
+                                <DropdownItem img={help} text={"Help Center"} />
+                            </Link>
                             <DropdownItem img={logout} text={"Log Out"} />
                         </MenuItems>
                 </DropdownMenu>
