@@ -19,10 +19,9 @@ export const Body = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
-  background-color: white;
   opacity: 0.7;
   position: absolute;
+  max-width: 200px;
 
   h2 {
     font-weight: bold;
@@ -30,11 +29,18 @@ export const Body = styled.div`
     font-size: 22px;
     color: #4a4a4a;
     text-transform: uppercase;
+    z-index: 1;
   }
 
   p {
     font-weight: lighter;
     font-size: 16px;
+    z-index: 1;
+  }
+
+  svg {
+    height: 290px;
+    position: absolute;
   }
 `;
 
@@ -73,5 +79,18 @@ export const DirectoryItemContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     height: 200px;
+
   }
+
+  overflow: hidden;
+  position: relative;
+
+  /* For Webkit-based browsers (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For Firefox */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 `;

@@ -8,11 +8,8 @@ export const FAQContainer = styled.div`
     text-align: center;
     color: white;
     font-family: 'Carter One', cursive;
-    width: 900px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    margin-top: -3%;
 
     h2 {
         font-size: 60px;
@@ -22,7 +19,12 @@ export const FAQContainer = styled.div`
 
 export const FAQItems = styled.div`
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .question.active {
+        align-items: center;
         background-color: #555;
       }
 `;
@@ -47,4 +49,5 @@ export const FAQAnswer = styled.div `
     text-shadow: -1px 2px 0 #000, 1px -1px 0 #000, -1px 2px 0 #000, -1px 1px 0 #000;
     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    max-width: 700px;
 `

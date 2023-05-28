@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import FAQComponent from '../../components/FAQ/FAQ.component';
 
 const faqs = [
@@ -26,9 +26,9 @@ const faqs = [
 
 const Faqs: React.FC = () => {
   return (
-    <div>
+    <Fragment>
       <FAQComponent faqs={faqs} />
-    </div>
+    </Fragment>
   );
 };
 
