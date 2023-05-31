@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+
 import {
   getAuth,
   signInWithRedirect,
@@ -21,6 +22,8 @@ import {
   query,
   getDocs,
   QueryDocumentSnapshot,
+  addDoc,
+  updateDoc,
 } from 'firebase/firestore';
 
 import { Category } from '../../store/categories/category.types';
@@ -33,6 +36,7 @@ const firebaseConfig = {
   messagingSenderId: "995114780298",
   appId: "1:995114780298:web:d070fde2e81a75817f8f73"
 };
+
 
 const firebaseApp = initializeApp(firebaseConfig);
 
@@ -85,6 +89,7 @@ export type AdditionalInformation = {
 };
 
 export type UserData = {
+  addressId: any;
   createdAt: Date;
   displayName: string;
   email: string;
@@ -105,14 +110,24 @@ export const createUserDocumentFromAuth = async (
     const createdAt = new Date();
 
     try {
+      // Create the user document
       await setDoc(userDocRef, {
         displayName,
         email,
         createdAt,
         ...additionalInformation,
       });
+
+      // Retrieve the address ID from the "addresses" collection
+      const addressRef = await addDoc(collection(db, 'addresses'), {});
+      const addressId = addressRef.id;
+
+      // Update the user document with the address ID
+      await updateDoc(userDocRef, {
+        addressId: addressId
+      });
     } catch (error) {
-      console.log('error creating the user', error);
+      console.log('Error creating the user', error);
     }
   }
 
@@ -153,4 +168,81 @@ export const getCurrentUser = (): Promise<User | null> => {
       reject
     );
   });
+};
+
+export const getCurrentUserId = (): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        resolve(user.uid);
+      } else {
+        reject(new Error('No user signed in.'));
+      }
+      unsubscribe();
+    });
+  });
+};
+
+let UserId: string;
+
+export const storeUserAddress = async (
+  userId: string,
+  addressData: AddressData
+): Promise<void> => {
+  try {
+    // Store the address in the "addresses" collection
+    const addressRef = await addDoc(collection(db, 'addresses'), addressData);
+    const addressId = addressRef.id;
+
+    // Update the user document to reference the address
+    const userDocRef = doc(db, 'users', userId);
+    await updateDoc(userDocRef, {
+      addressId: addressId,
+    });
+
+    // Update the address document to reference the user
+    const addressDocRef = doc(db, 'addresses', addressId);
+    await updateDoc(addressDocRef, {
+      userId: userId,
+    });
+
+    console.log('Address stored successfully!');
+  } catch (error) {
+    console.error('Error storing address:', error);
+  }
+};
+
+export const fetchUserAddress = async (userId: string) => {
+  try {
+    const userDocRef = doc(db, 'users', userId);
+    const userSnapshot = await getDoc(userDocRef);
+
+    if (userSnapshot.exists()) {
+      const userData = userSnapshot.data() as UserData;
+      const addressId = userData.addressId;
+
+      if (addressId) {
+        const addressDocRef = doc(db, 'addresses', addressId);
+        const addressSnapshot = await getDoc(addressDocRef);
+
+        if (addressSnapshot.exists()) {
+          const addressData = addressSnapshot.data() as AddressData;
+          return addressData;
+        }
+      }
+    }
+
+    return null;
+  } catch (error) {
+    console.error('Error fetching user address:', error);
+    return null;
+  }
+};
+
+export type AddressData = {
+  street: string;
+  city: string;
+  state: string;
+  zip: string;
 };

@@ -31,3 +31,13 @@ export const Total = styled.span`
   margin-left: auto;
   font-size: 36px;
 `;
+
+export const AddressContainer = styled.div`
+
+`;
+export const AddressTitle = styled.div`
+
+`;
+export const AddressText = styled.div`
+
+`;
