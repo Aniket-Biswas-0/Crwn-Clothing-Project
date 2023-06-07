@@ -58,7 +58,7 @@ export const AddressText = styled.div`
 export const PaymentContainer = styled.div`
 margin-top: -1.5rem;
 display: flex;
-width: 70rem;
+width: 80rem;
 justify-content: space-between;
 align-items: center;
 `;

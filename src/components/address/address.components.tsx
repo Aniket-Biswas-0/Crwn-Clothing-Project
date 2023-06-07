@@ -7,9 +7,10 @@ import { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
 interface AddressFormProps {
   userId: string;
+  onAddressSubmit: () => void;
 }
 
-const AddressForm: React.FC<AddressFormProps> = ({ userId }) => {
+const AddressForm: React.FC<AddressFormProps> = ({ userId, onAddressSubmit }) => {
   const [address, setAddress] = useState<AddressData>({
     street: '',
     city: '',
@@ -41,6 +42,8 @@ const AddressForm: React.FC<AddressFormProps> = ({ userId }) => {
       zip: 0,
       phoneNo: 0,
     });
+
+    onAddressSubmit();
   };
 
   return (

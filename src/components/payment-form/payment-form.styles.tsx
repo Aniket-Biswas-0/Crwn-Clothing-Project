@@ -11,7 +11,7 @@ export const PaymentFormContainer = styled.div`
   border-radius: 35px 20px;
   background-color: #abe9cd;
   background-image: linear-gradient(90deg, #abe9cd 0%, #3eadcf 74%);
-  width: 30rem;
+  width: 35rem;
 `;
 
 export const FormContainer = styled.form`

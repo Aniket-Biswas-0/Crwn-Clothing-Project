@@ -65,7 +65,7 @@ const PaymentForm = () => {
       alert(paymentResult.error);
     } else {
       if (paymentResult.paymentIntent.status === 'succeeded') {
-        alert('Payment Successful');
+        alert('Payment Successful. Order placed successfully.');
       }
     }
   };
