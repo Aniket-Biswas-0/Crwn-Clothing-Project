@@ -11,14 +11,15 @@ export const PaymentFormContainer = styled.div`
   border-radius: 35px 20px;
   background-color: #abe9cd;
   background-image: linear-gradient(90deg, #abe9cd 0%, #3eadcf 74%);
-
+  width: 30rem;
 `;
 
 export const FormContainer = styled.form`
   height: 100px;
   min-width: 500px;
+  align-items: center;
   h2 {
-    
+    text-align: center;
   }
 `;
 

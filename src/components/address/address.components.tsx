@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { storeUserAddress, AddressData } from '../../utils/firebase/firebase.utils';
+import { AddressFormContainer, FormContainer, SubmitButton } from './address.styles';
+
+import FormInput from '../form-input/form-input.component';
+import { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
 interface AddressFormProps {
   userId: string;
@@ -10,14 +14,16 @@ const AddressForm: React.FC<AddressFormProps> = ({ userId }) => {
     street: '',
     city: '',
     state: '',
-    zip: '',
+    zip: 0, // Initialize zip as a number
+    phoneNo: 0, // Add phoneNo field
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setAddress((prevState: any) => ({
+
+    setAddress((prevState: AddressData) => ({
       ...prevState,
-      [name]: value,
+      [name]: name === 'zip' ? parseInt(value, 10) : value, // Convert zip to a number
     }));
   };
 
@@ -32,54 +38,75 @@ const AddressForm: React.FC<AddressFormProps> = ({ userId }) => {
       street: '',
       city: '',
       state: '',
-      zip: '',
+      zip: 0,
+      phoneNo: 0,
     });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="street">Street</label>
-      <input
-        type="text"
-        id="street"
-        name="street"
-        value={address.street}
-        onChange={handleChange}
-        required
-      />
+    <AddressFormContainer>
+      <h2>Enter Your Address</h2>
+      <FormContainer onSubmit={handleSubmit}>
+        <FormInput
+          label='Street'
+          type="text"
+          id="street"
+          name="street"
+          value={address.street}
+          onChange={handleChange}
+          required
+        />
 
-      <label htmlFor="city">City</label>
-      <input
-        type="text"
-        id="city"
-        name="city"
-        value={address.city}
-        onChange={handleChange}
-        required
-      />
+        <FormInput
+          label='City'
+          type="text"
+          id="city"
+          name="city"
+          value={address.city}
+          onChange={handleChange}
+          required
+        />
 
-      <label htmlFor="state">State</label>
-      <input
-        type="text"
-        id="state"
-        name="state"
-        value={address.state}
-        onChange={handleChange}
-        required
-      />
+        <FormInput
+          label='State'
+          type="text"
+          id="state"
+          name="state"
+          value={address.state}
+          onChange={handleChange}
+          required
+        />
 
-      <label htmlFor="zip">ZIP</label>
-      <input
-        type="text"
-        id="zip"
-        name="zip"
-        value={address.zip}
-        onChange={handleChange}
-        required
-      />
+        <FormInput
+          label='ZIP'
+          type="number"
+          id="zip"
+          name="zip"
+          value={address.zip || ''}
+          onChange={handleChange}
+          required
+          autoComplete="off" // Add autoComplete attribute to disable autofill
+          inputMode="numeric" // Specify input mode as numeric
+          pattern="\d*" // Set pattern to accept only numeric input
+        />
 
-      <button type="submit">Save Address</button>
-    </form>
+        <FormInput
+          label='Phone No.'
+          type="tel" // Change input type to "tel"
+          id="phoneNo"
+          name="phoneNo"
+          value={address.phoneNo || ''}
+          onChange={handleChange}
+          required
+          autoComplete="off" // Add autoComplete attribute to disable autofill
+          inputMode="numeric" // Specify input mode as numeric
+          pattern="\d*" // Set pattern to accept only numeric input
+        />
+
+
+        <SubmitButton buttonType={BUTTON_TYPE_CLASSES.inverted}>Save Address</SubmitButton>
+      </FormContainer>
+    </AddressFormContainer>
   );
 };
 

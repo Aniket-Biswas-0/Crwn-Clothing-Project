@@ -244,5 +244,6 @@ export type AddressData = {
   street: string;
   city: string;
   state: string;
-  zip: string;
+  zip: number;
+  phoneNo: number;
 };

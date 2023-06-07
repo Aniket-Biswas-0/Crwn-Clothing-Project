@@ -16,6 +16,8 @@ import {
   AddressContainer,
   AddressTitle,
   AddressText,
+  PaymentContainer,
+  ProceedToPay,
 } from './checkout.styles';
 
 const Checkout = () => {
@@ -62,15 +64,19 @@ const Checkout = () => {
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <Total>Total: ₹{cartTotal}</Total>
-      {address && (
-        <AddressContainer>
-          <AddressTitle>Shipping Address:</AddressTitle>
-          <AddressText>{address.street}</AddressText>
-          <AddressText>{address.city}, {address.state}, {address.zip}</AddressText>
-        </AddressContainer>
-      )}
-      {userId && <AddressForm userId={userId} />}
-      <PaymentForm />
+      <PaymentContainer>
+        {userId && <AddressForm userId={userId} />}
+        <ProceedToPay>
+          {address && (
+            <AddressContainer>
+              <AddressTitle>Shipping Address</AddressTitle>
+              <AddressText>{address.street}, {address.city}, {address.state}, Pincode: {address.zip}</AddressText>
+              <AddressText>Contact No: {address.phoneNo}</AddressText>
+            </AddressContainer>
+          )}
+          <PaymentForm />
+        </ProceedToPay>
+      </PaymentContainer>
     </CheckoutContainer>
   );
 };
