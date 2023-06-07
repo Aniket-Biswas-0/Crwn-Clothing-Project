@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from '../../components/button/button.component';
 
 export const CheckoutContainer = styled.div`
   width: 55%;
@@ -67,4 +68,17 @@ export const ProceedToPay = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1.4rem;
+  h2 {
+    margin-bottom: -.8rem;
+  }
+  h1 {
+    color: white;
+    font-size: 2rem;
+    margin-top: 0rem;
+  }
+`;
+
+export const SignInButton = styled(Button)`
+
 `;
