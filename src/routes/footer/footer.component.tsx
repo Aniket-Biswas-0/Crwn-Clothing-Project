@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
       };
 
       const redirectToWebsite = () => {
-        window.location.href = 'http://localhost:5173';
+        window.location.href = 'https://crown-customizer.netlify.app/';
       };
 
   return (
