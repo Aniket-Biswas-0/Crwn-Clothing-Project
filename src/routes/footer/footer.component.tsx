@@ -19,6 +19,11 @@ const Footer: React.FC = () => {
 
         setFormFields({ ...formFields, [name]: value });
       };
+
+      const redirectToWebsite = () => {
+        window.location.href = 'http://localhost:5173';
+      };
+
   return (
     <Fragment>
         <Outlet />
@@ -43,17 +48,10 @@ const Footer: React.FC = () => {
                 </ul>
             </FollowUs>
             <Newsletter>
-                <h4>Subscribe to our Newsletter</h4>
-                <form>
-                    <FormInput label='Email'
-                        type='email'
-                        required
-                        onChange={handleChange}
-                        name='email'
-                        value={email}
-                        />
-                        <Button type="submit">Subscribe</Button>
-                </form>
+                <label>Make a customized Shirt</label>
+                <div>
+                    <Button onClick={redirectToWebsite}>Customize Shirt</Button>
+                </div>
             </Newsletter>
             <ContactUs>
                 <h4>Contact Us</h4>

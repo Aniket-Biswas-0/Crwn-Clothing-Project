@@ -66,27 +66,21 @@ h4 {
 `;
 
 export const Newsletter = styled.div `
-h4 {
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Carter One', cursive;
-    margin-bottom: 16px;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    margin-top: -40px;
-  }
-  
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+label {
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: rem;;
+}
+
+
   ${BaseButton},
   ${GoogleSignInButton},
   ${InvertedButton} {
-    margin: -55px;
+    margin-left: rem;
   }
 `;
 
