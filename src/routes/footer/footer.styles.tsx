@@ -27,7 +27,8 @@ export const SiteNavigation = styled.div `
   h4 {
     text-align: center;
     font-size: 18px;
-    font-family: 'Carter One', cursive;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
     margin-bottom: 16px;
   }
   ul {
@@ -48,7 +49,8 @@ export const FollowUs = styled.div `
 h4 {
     text-align: center;
     font-size: 18px;
-    font-family: 'Carter One', cursive;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
     margin-bottom: 16px;
   }
   ul {
@@ -72,8 +74,9 @@ flex-direction: column;
 h4 {
   text-align: center;
   font-size: 18px;
-  font-family: 'Carter One', cursive;
-  margin-bottom: rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  margin-bottom: 2rem;
 }
 
 
@@ -95,7 +98,8 @@ export const ContactUs = styled.div `
 h4 {
     text-align: center;
     font-size: 18px;
-    font-family: 'Carter One', cursive;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
     margin-bottom: 16px;
   }
 

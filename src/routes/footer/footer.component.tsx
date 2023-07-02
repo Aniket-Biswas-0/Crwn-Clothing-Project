@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { FooterContainer, SiteNavigation, FollowUs, Newsletter, ContactUs } from './footer.styles';
 import FormInput from '../../components/form-input/form-input.component'
 
-import Button from '../../components/button/button.component';
+import Button, { BUTTON_TYPE_CLASSES } from '../../components/button/button.component';
 
 const defaultFormFields = {
     email: '',
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
             <Newsletter>
                 <h4>Create Your Own Design</h4>
                 <div>
-                    <Button onClick={redirectToWebsite}>Customize Shirt</Button>
+                    <Button onClick={redirectToWebsite} buttonType={BUTTON_TYPE_CLASSES.inverted}>Create Design</Button>
                 </div>
             </Newsletter>
             <ContactUs>

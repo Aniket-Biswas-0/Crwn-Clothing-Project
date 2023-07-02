@@ -37,6 +37,8 @@ export const CartDropdownContainer = styled.div`
   border-radius: 35px 10px;
   box-shadow: 5px 4px 3px rgba(0, 0, 0, .6);
   background: radial-gradient(circle, rgba(86, 237, 5, 1) -10%, rgba(5, 83, 135, 1) 50%, rgba(1, 33, 40, 1) 120%);
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
 
   ${BaseButton},
   ${GoogleSignInButton},

@@ -27,15 +27,19 @@ export const Body = styled.div`
     font-weight: bold;
     margin: 0 6px 0;
     font-size: 22px;
-    color: #4a4a4a;
+    color: #000000;
     text-transform: uppercase;
     z-index: 1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
   }
 
   p {
     font-weight: lighter;
     font-size: 16px;
     z-index: 1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
   }
 
   svg {

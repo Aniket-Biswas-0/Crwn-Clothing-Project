@@ -24,7 +24,7 @@ export const LogoContainer = styled(Link)`
   padding: 25px;
   & span{
     padding-left: 20px;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
   }
 
@@ -41,6 +41,8 @@ export const NavLinks = styled.div`
   align-items: center;
   justify-content: flex-end;
   margin-top: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
 
   @media screen and (max-width: 800px) {
     width: 80%;

@@ -8,6 +8,7 @@ export const CheckoutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0;
+  font-family: 'Inter', sans-serif;
 `;
 
 export const CheckoutHeader = styled.div`
@@ -16,6 +17,8 @@ export const CheckoutHeader = styled.div`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid darkgrey;
+  font-weight: 900;
+  text-shadow: 2px -1px 5px black;
 `;
 
 export const HeaderBlock = styled.div`
@@ -30,7 +33,8 @@ export const HeaderBlock = styled.div`
 export const Total = styled.span`
   margin-top: 30px;
   margin-left: auto;
-  font-size: 36px;
+  font-size: 2rem;
+  font-weight: 900;
 `;
 
 export const AddressContainer = styled.div`

@@ -8,7 +8,7 @@ export const CategoryPreviewContainer = styled.div`
   flex-direction: column;
   margin-top: -30px;
   margin-bottom: 70px;
-  font-family: 'Carter One':
+  font-family: 'Inter', sans-serif;
 
   @media screen and (max-width: 800px) {
     align-items: center;
@@ -19,7 +19,7 @@ export const Title = styled(Link)`
   font-size: 35px;
   margin-top: 25px;
   cursor: pointer;
-  font-family: 'Carter One':
+  font-family: 'Inter', sans-serif;
 `;
 
 export const Preview = styled.div`

@@ -65,7 +65,7 @@ export const Footer = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 18px;
-  font-family: 'Carter One';
+  font-family: 'Inter', sans-serif;
 `;
 
 export const Name = styled.span`
