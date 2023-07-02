@@ -19,11 +19,13 @@ export const FormContainer = styled.form`
   min-width: 500px;
   align-items: center;
   h2 {
+    font-size: 2rem;
+    margin-top: -.3rem;
     text-align: center;
   }
 `;
 
 export const PaymentButton = styled(Button)`
   margin-left: auto;
-  margin-top: 50px;
+  margin-top: 8rem;
 `;

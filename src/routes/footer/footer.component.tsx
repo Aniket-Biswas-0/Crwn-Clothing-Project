@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                 </ul>
             </FollowUs>
             <Newsletter>
-                <label>Make a customized Shirt</label>
+                <h4>Create Your Own Design</h4>
                 <div>
                     <Button onClick={redirectToWebsite}>Customize Shirt</Button>
                 </div>

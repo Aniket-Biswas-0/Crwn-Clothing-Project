@@ -68,19 +68,19 @@ h4 {
 export const Newsletter = styled.div `
 display: flex;
 flex-direction: column;
-justify-content: center;
 
-label {
+h4 {
   text-align: center;
-  font-size: 23px;
-  margin-bottom: rem;;
+  font-size: 18px;
+  font-family: 'Carter One', cursive;
+  margin-bottom: rem;
 }
 
 
   ${BaseButton},
   ${GoogleSignInButton},
   ${InvertedButton} {
-    margin-left: rem;
+    margin-top: -.8rem;
   }
 `;
 
