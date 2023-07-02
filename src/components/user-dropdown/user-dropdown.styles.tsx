@@ -1,7 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 
 export const MenuContainer = styled.div`
-  font-family: 'Carter One';
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
   font-size: 1rem;
 `;
 
@@ -30,7 +31,7 @@ export const DropdownMenu = styled.div`
     position: absolute;
     background-color: #37B140;
     border-radius: 8px;
-    width:200px;
+    width:250px;
     opacity: 0;
     transform: translateY(-100%);
     animation-name: ${slideInAnimation};
@@ -57,7 +58,7 @@ export const DropdownMenu = styled.div`
         content: '';
         position: absolute;
         right: 15px;
-        bottom: 280px;
+        bottom: 220px;
         height: 20px;
         width: 20px;
         background: #37B140;
@@ -67,6 +68,8 @@ export const DropdownMenu = styled.div`
 
 export const MenuItems = styled.div`
     padding-left: 1.8rem;
+    font-weight: 900;
+    font-family: 'Inter', sans-serif;
 `;
 
 export const DropdownItems = styled.div`

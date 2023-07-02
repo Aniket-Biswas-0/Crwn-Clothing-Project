@@ -50,9 +50,6 @@ const UserDropdown = () => {
                 <DropdownMenu>
                     <h3>{currentUser?.displayName}</h3>
                         <MenuItems as='ul'>
-                            <Link to='/user'>
-                            <DropdownItem img={user} text={"My Profile"} />
-                            </Link>
                             <Link to='/faq'>
                                 <DropdownItem img={question} text={"FAQ"} />
                             </Link>
@@ -66,9 +63,7 @@ const UserDropdown = () => {
                 <DropUpMenu>
                     <h3>{currentUser?.displayName}</h3>
                         <MenuItems as='ul'>
-                            <DropdownItem img={user} text={"My Profile"} />
                             <DropdownItem img={question} text={"FAQ"} />
-                            <DropdownItem img={help} text={"Help Center"} />
                             <DropdownItem img={logout} text={"Log Out"} />
                         </MenuItems>
                 </DropUpMenu>
